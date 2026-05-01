@@ -31,8 +31,8 @@ engine for comprehensive scanning.
 
 Clone the repository:
 
-  $ git clone https://github.com/mercury-osint-project/MercuryOSINT.git
-  $ cd MercuryOSINT
+ ``` $ git clone https://github.com/mercury-osint-project/MercuryOSINT.git```
+ ``` $ cd MercuryOSINT````
 
 Install Python dependencies:
 ```
@@ -98,18 +98,19 @@ TXT is human-readable with URLs grouped by site.
 
 ## Project Structure
 
-  MercuryOSINT/
-    mercury.py           Python engine (main scanner)
-    mercury_probe.c      C probe companion
-    requirements.txt     Python dependencies
-    data/
-      sites.json         Site database (1500+ platforms)
-    output/              Scan results directory
+-  MercuryOSINT/
+   * mercury.py           Python engine (main scanner)
+   * mercury_probe.c      C probe companion
+   * requirements.txt     Python dependencies
+   - data/
+     * sites.json         Site database (1500+ platforms)
+   - output/              Scan results directory
 
 
 ## Disclaimer
 
 This tool is intended for legal, ethical research purposes only.
+
 Unauthorized use against systems you do not own or have explicit
 permission to test is prohibited. Users are solely responsible for
 compliance with applicable laws in their jurisdiction.
