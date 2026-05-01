@@ -21,9 +21,13 @@ FEATURES
 
 
 INSTALLATION
-$ git clone https://github.com/mercury-osint-project/MercuryOSINT.git
-$ cd mercuryosint
+```$ git clone https://github.com/mercury-osint-project/MercuryOSINT.git
+```
+```$ cd mercuryosint
+```
+```
 $ pip install -r requirements.txt
+```
 
 Dependencies
 - aiohttp>=3.8
