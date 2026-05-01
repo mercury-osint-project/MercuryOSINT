@@ -36,36 +36,39 @@ Dependencies
 - colorama>=0.4
 
 Optional: Build C Probe
-$ gcc -O2 -o mercury_probe mercury_probe.c -lpthread
+```$ gcc -O2 -o mercury_probe mercury_probe.c -lpthread
+```
 
 For HTTPS support:
+```
 $ gcc -O2 -o mercury_probe mercury_probe.c -lpthread -lssl -lcrypto -DWITH_SSL
+```
 
-
-USAGE
-Python Engine
-$ python3 mercury.py johndoe
+# USAGE
+## Python Engine
+```$ python3 mercury.py johndoe
 $ python3 mercury.py johndoe --concurrency 100 --verbose
 $ python3 mercury.py johndoe --output ./results
 $ python3 mercury.py johndoe --filter gaming
 $ python3 mercury.py johndoe --fast
-
-C Probe
+```
+## C Probe
+```
 $ ./mercury_probe johndoe
 $ ./mercury_probe johndoe 100
 $ cat urls.txt | ./mercury_probe johndoe
+```
 
-
-OPTIONS
-Flag                 Description
+# OPTIONS
+## Flag                 Description
 username             Target username
--c, --concurrency    Concurrent requests (default: 50)
+```-c, --concurrency    Concurrent requests (default: 50)
 -v, --verbose        Show all results including misses
 -o, --output         Output directory (default: ./output)
 --filter             Filter by name keyword
 --fast               Top 200 most popular sites only
 --list-sites         List all sites in database
-
+```
 
 OUTPUT
 Results are saved to the output/ directory in three formats:
