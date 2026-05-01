@@ -35,39 +35,40 @@ Clone the repository:
   $ cd MercuryOSINT
 
 Install Python dependencies:
-
+```
   $ pip install -r requirements.txt
-
+````
 Dependencies
 
   - [aiohttp](https://pypi.org/project/aiohttp/) >= 3.8
   - [colorama](https://pypi.org/project/colorama/) >= 0.4
 
 Optional: Build C Probe
-
+````
   $ gcc -O2 -o mercury_probe mercury_probe.c -lpthread
 
 For HTTPS support:
 
   $ gcc -O2 -o mercury_probe mercury_probe.c -lpthread -lssl -lcrypto -DWITH_SSL
-
+````
 
 ## Usage
 
-Python Engine
-
+## Python Engine
+````
   $ python3 mercury.py johndoe
   $ python3 mercury.py johndoe --concurrency 100 --verbose
   $ python3 mercury.py johndoe --output ./results
   $ python3 mercury.py johndoe --filter gaming
   $ python3 mercury.py johndoe --fast
+````
 
-C Probe
-
+## C Probe
+````
   $ ./mercury_probe johndoe
   $ ./mercury_probe johndoe 100
   $ cat urls.txt | ./mercury_probe johndoe
-
+````
 
 ## Options
 
@@ -86,10 +87,10 @@ C Probe
 
 Results are saved to the output/ directory in three formats:
 
-  output/
-    mercury_johndoe_20260101_120000.json
-    mercury_johndoe_20260101_120000.csv
-    mercury_johndoe_20260101_120000.txt
+ - output/
+   * mercury_johndoe_20260101_120000.json
+   * mercury_johndoe_20260101_120000.csv
+   * mercury_johndoe_20260101_120000.txt
 
 JSON format includes full metadata. CSV is spreadsheet-ready.
 TXT is human-readable with URLs grouped by site.
